@@ -4,20 +4,28 @@
     <title><%=shopName%></title> 
     <link rel="stylesheet" href="/css/style.css">
   </head>  
-  <body>  
-      <nav>
-  <a href="/">Home</a> | 
-  <a href="/about">About</a> | 
-  <a href="/search">Search</a> | 
-  <a href="/register">Register</a> | 
-  <a href="/survey">Survey</a>
-</nav>
+  <body>
+    <nav>
+      <a href="/">Home</a> | 
+      <a href="/about">About</a> | 
+      <a href="/search">Search</a> | 
+      <a href="/register">Register</a> | 
+      <a href="/survey">Survey</a>
+    </nav>
+    <hr>
+    
     <h1>This is the register page</h1> 
     <form method="POST" action="/registered"> 
-    First Name:<input id="first" type="text" name="first"/> 
-    Last Name:<input id="last" type="text" name="last" /> 
-    <input type="submit" value="OK" /> 
-</form>
+        <label>First Name:</label>
+        <input id="first" type="text" name="first" required/><br>
+        
+        <label>Last Name:</label>
+        <input id="last" type="text" name="last" required/><br>
+        
+        <label>Email:</label>
+        <input id="email" type="email" name="email" required/><br>
+        
+        <input type="submit" value="Register"/> 
+    </form>
   </body>  
-<hr>
 </html>
