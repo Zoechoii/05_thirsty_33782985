@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=shopName%></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Customer Survey</h1>
+    <form method="POST" action="/survey_result">
+      <label>First Name:</label>
+      <input type="text" name="first" required><br>
+      
+      <label>Surname:</label>
+      <input type="text" name="surname" required><br>
+      
+      <label>Email:</label>
+      <input type="text" name="email" required><br>
+      
+      <label>How old are you?</label>
+<input type="number" name="age" min="0" max="120" required><br>
+      
+      <p>Which of the following drinks categories do you consume?</p>
+      <% for(let i = 0; i < productCategories.length; i++) { %>
+        <input type="radio" name="category" value="<%= productCategories[i] %>">
+        <label><%= productCategories[i] %></label><br>
+      <% } %>
+      
+      <p>
+        <input type="checkbox" name="student" value="yes">
+        <label>Are you a student?</label>
+      </p>
+      
+      <input type="submit" value="Submit Survey">
+    </form>
+  </body>
+</html>

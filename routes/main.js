@@ -39,5 +39,25 @@ router.post("/registered", (req, res) => {
   res.send('Hello '+ req.body.first + ' '+ req.body.last + '. You are now registered! We will send an email to: ' + req.body.email);   
 });
 
+router.get("/survey", (req, res) => {
+    res.render("survey.ejs", shopData);
+});
+
+router.post("/survey_result", (req, res) => {
+    let studentStatus = req.body.student ? 'Yes' : 'No';
+    
+    let surveyData = {
+        shopName: shopData.shopName,
+        first: req.body.first,
+        surname: req.body.surname,
+        email: req.body.email,
+        age: req.body.age,
+        category: req.body.category,
+        student: studentStatus
+    };
+    
+    res.render("survey_result.ejs", surveyData);
+});
+
 // Export the router object so index.js can access it
 module.exports = router;
