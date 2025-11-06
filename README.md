@@ -54,9 +54,7 @@ http://localhost:8000
 | `/` | GET | Home page with product categories |
 | `/about` | GET | About page with shop locations and managers |
 | `/search` | GET | Search form |
-| `/search_result` | GET | Search results display |
 | `/register` | GET | Registration form |
-| `/registered` | POST | Registration confirmation |
 | `/survey` | GET | Customer survey form |
 | `/survey_result` | POST | Survey results display |
 
