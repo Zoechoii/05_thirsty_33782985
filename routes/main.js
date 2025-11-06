@@ -5,7 +5,12 @@ const router = express.Router();
 // Define our data
 var shopData = {
     shopName: "The Beverage Shop",
-    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"]
+    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
+    shops: [
+        {name: "Downtown Branch", manager: "John Smith", address: "123 Main St, London"},
+        {name: "Campus Branch", manager: "Sarah Johnson", address: "45 University Ave, London"},
+        {name: "Westside Branch", manager: "Mike Brown", address: "789 West Rd, London"}
+    ]
 };
 
 // Handle the main routes
