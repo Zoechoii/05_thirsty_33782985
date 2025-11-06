@@ -5,21 +5,25 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Search <%=shopName%></h1>
-    <p>This is the search page. Search functionality will be implemented later!</p>
+    <nav>
+      <a href="/">Home</a> | 
+      <a href="/about">About</a> | 
+      <a href="/search">Search</a> | 
+      <a href="/register">Register</a> | 
+      <a href="/survey">Survey</a>
+    </nav>
+    <hr>
     
-<form action="/search_result" method="GET">
-  <input id="search_box" type="text" name="search_text">
-  <input id="category" type="text" name="category">
-  <input type="submit" value="OK">
-</form>
+    <h1>Search <%=shopName%></h1>
+    
+    <form action="/search_result" method="GET">
+      <label>Search keyword:</label>
+      <input id="search_box" type="text" name="search_text" placeholder="e.g. beer"><br>
+      
+      <label>Category:</label>
+      <input id="category" type="text" name="category" placeholder="e.g. drinks"><br>
+      
+      <input type="submit" value="Search">
+    </form>
   </body>
-  <nav>
-  <a href="/">Home</a> | 
-  <a href="/about">About</a> | 
-  <a href="/search">Search</a> | 
-  <a href="/register">Register</a> | 
-  <a href="/survey">Survey</a>
-</nav>
-<hr>
 </html>

@@ -5,21 +5,21 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <nav>
+      <a href="/">Home</a> | 
+      <a href="/about">About</a> | 
+      <a href="/search">Search</a> | 
+      <a href="/register">Register</a> | 
+      <a href="/survey">Survey</a>
+    </nav>
+    <hr>
+    
     <h1>Welcome to <%=shopName%></h1>
     <h2>Here are some things that we sell:</h2>
     <ul>
-  <% for(let i = 0; i < productCategories.length; i++) { %>
-    <li><%= productCategories[i] %></li>
-  <% } %>
-</ul>
-    </body>
-    <nav>
-  <a href="/">Home</a> | 
-  <a href="/about">About</a> | 
-  <a href="/search">Search</a> | 
-  <a href="/register">Register</a> | 
-  <a href="/survey">Survey</a>
-</nav>
-<hr>
+      <% for(let i = 0; i < productCategories.length; i++) { %>
+        <li><%= productCategories[i] %></li>
+      <% } %>
+    </ul>
+  </body>
 </html>
-ㅡ
